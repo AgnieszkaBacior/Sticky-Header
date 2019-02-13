@@ -1,0 +1,109 @@
+// Variable 
+// abstracts/_variables.scss
+
+$main-color: #464444;
+$second-color: #83e991;
+
+$link-color:        $main-color;
+$link-hover:        $second-color;
+$link-active:       lighten($link-color, 11.5%);
+
+$margin: 1rem;
+$padding: 1rem;
+
+/*********************
+Generale
+*********************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: #a1ddae;
+}
+h1,
+h2 {
+    margin: $margin * 2 $margin;
+    font-weight: normal;
+}
+p {
+    margin: $margin * 2 $margin;
+}
+
+/*********************
+Header 
+*********************/
+// layout/_l-header.scss
+
+.l-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+
+    &--sticky {
+        @media screen and (min-width: 60em) {
+            position: sticky;
+            top: 0; 
+            width: 100%;
+        }
+    }
+}
+
+/*********************
+Logo
+*********************/
+// layout/_l-logo.scss
+
+.l-logo {
+    display: inline-block;
+    margin: $margin;
+
+    &__image {
+        width: 4rem;
+        vertical-align: middle;
+    }
+}
+
+/*********************
+Link
+*********************/
+// components/_c-link.scss
+
+.c-link {
+    text-decoration: none;
+    outline: none;
+
+    &:link,
+    &:visited {
+        color: $link-color; 
+    }
+    &:hover,
+    &:focus {
+        color: $link-hover; 
+    }
+    &:active {
+        color: $link-active; 
+    }
+}
+
+/*********************
+Navigation
+*********************/
+// layout/_l-nav.scss
+
+.l-nav {
+    
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+        padding: $padding;
+    }
+}

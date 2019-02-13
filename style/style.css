@@ -1,0 +1,82 @@
+/*********************
+Generale
+*********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  background-color: #a1ddae;
+}
+
+h1,
+h2 {
+  margin: 2rem 1rem;
+  font-weight: normal;
+}
+
+p {
+  margin: 2rem 1rem;
+}
+
+/*********************
+Header 
+*********************/
+.l-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 60em) {
+  .l-header--sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/*********************
+Logo
+*********************/
+.l-logo {
+  display: inline-block;
+  margin: 1rem;
+}
+.l-logo__image {
+  width: 4rem;
+  vertical-align: middle;
+}
+
+/*********************
+Link
+*********************/
+.c-link {
+  text-decoration: none;
+  outline: none;
+}
+.c-link:link, .c-link:visited {
+  color: #464444;
+}
+.c-link:hover, .c-link:focus {
+  color: #83e991;
+}
+.c-link:active {
+  color: #646161;
+}
+
+/*********************
+Navigation
+*********************/
+.l-nav__list {
+  list-style: none;
+}
+.l-nav__item {
+  display: inline-block;
+  padding: 1rem;
+}
